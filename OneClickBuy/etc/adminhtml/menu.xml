@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/menu.xsd">
+<menu>
+    <add id="GSV_OneClickBuy::oneclickbuy"
+         title="One Click Buy"
+         module="GSV_OneClickBuy"
+         sortOrder="100"
+         parent="Magento_Backend::marketing"
+         resource="GSV_OneClickBuy::oneclickbuy"
+    />
+    <add id="GSV_OneClickBuy::orders_grid"
+         title="Grid"
+         module="GSV_OneClickBuy"
+         sortOrder="100"
+         parent="GSV_OneClickBuy::oneclickbuy"
+         action="oneclickbuy/grid"
+         resource="GSV_OneClickBuy::oneclickbuy_grid"
+    />
+</menu>
+</config>

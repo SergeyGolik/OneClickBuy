@@ -1,0 +1,22 @@
+{
+    "name": "gsv/module-oneclickbuy",
+    "description": "One Click Buy",
+    "type": "magento2-module",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "GSV",
+            "email": "23_11_2015@ukr.net
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "GSV\\OneClickBuy\\": ""
+        }
+    }
+}

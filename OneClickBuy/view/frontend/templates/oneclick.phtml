@@ -1,0 +1,25 @@
+<button id="one-click-buy-button">Купити в 1 клік</button>
+
+<script type="text/javascript">
+    require(['jquery', 'mage/url'], function ($, urlBuilder) {
+        $('#one-click-buy-button').click(function () {
+            var phone = prompt("Введіть ваш номер телефона:");
+            if (phone) {
+                $.ajax({
+                    url: urlBuilder.build('oneclickbuy/index/order'),
+                    type: 'POST',
+                    data: {
+                        product_sku: '<?php echo $block->escapeHtml($block->getProduct()->getSku()); ?>',
+                        phone: phone
+                    },
+                    success: function (response) {
+                        alert('Ваше замовлення прийняте! Ми свяжемося з Вами найближчим часом.');
+                    },
+                    error: function () {
+                        alert('Виникла помилка. Будласка, спробуйте еще раз.');
+                    }
+                });
+            }
+        });
+    });
+</script>
